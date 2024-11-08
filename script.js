@@ -23,7 +23,7 @@
     }
     console.log(sum(range(1, 10)));
 
-    
+
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
 // its elements appear. For this exercise, write two functions, reverseArray and
 // reverseArrayInPlace. The first, reverseArray, takes an array as an argument and
@@ -37,3 +37,26 @@
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+function reverseArray(array) {
+    let results= [];
+    for(let i = array.length - 1; i >= 0; i--){
+        results.push(array[i]);
+    }
+    return results;
+    }
+
+
+    function reverseArrayInPlace(array){
+        for (let i = 0; i < Math.floor(array.length / 2); i++) {
+            let old = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = old;
+          }
+          return array;
+        } 
+     
+    console.log(reverseArray(["A", "B", "C"]));
+    
+    let arrayValue =[1,2,3,4,5];
+    reverseArrayInPlace(arrayValue);
+    console.log(arrayValue);
