@@ -9,7 +9,8 @@
         }
         return count
     }
-    console.log(range(1, 10));
+    console.log(range(1, 10)); // Outputs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 // 2. Next, write a sum function that takes an array of numbers and returns the sum of
 // these numbers. Run the example program and see whether it does indeed return 55.
 // Example output:
@@ -21,7 +22,7 @@
         }
         return total;
     }
-    console.log(sum(range(1, 10)));
+    console.log(sum(range(1, 10))); // outputs 55
 
 
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
@@ -37,6 +38,7 @@
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+
 function reverseArray(array) {
     let results= [];
     for(let i = array.length - 1; i >= 0; i--){
@@ -55,8 +57,8 @@ function reverseArray(array) {
           return array;
         } 
      
-    console.log(reverseArray(["A", "B", "C"]));
+    console.log(reverseArray(["A", "B", "C"]));  // Outputs ["C", "B", "A"]
     
     let arrayValue =[1,2,3,4,5];
     reverseArrayInPlace(arrayValue);
-    console.log(arrayValue);
+    console.log(arrayValue);  // Outputs [5, 4, 3, 2, 1]
